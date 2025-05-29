@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/AlexKnusel-MKETool/rudder-stack-versioning#readme",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.27.1",
     "@eslint/js": "^9.27.0",
     "eslint": "^9.27.0",
     "eslint-config-node": "^4.1.0",
