@@ -15,6 +15,6 @@ jobs:
       - uses: rudderlabs/rudder-transformation-action@v1.1.4
         with:
           metaPath: './meta.json'
-          email: ${{ github.event.pusher.email }}
+          email: 'alex.knusel@milwaukeetool.com'
           accessToken: ${{ secrets.SERVICE_ACCESS_TOKEN }}
           uploadTestArtifact: true

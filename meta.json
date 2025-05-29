@@ -2,7 +2,7 @@
   "transformations": [
     {
       "file": "transformations/test-transformation.js",
-      "name": "test-transformation",
+      "name": "Test Transformation",
       "language": "javascript",
       "description": "sample description",
       "test-input-file": "./tests/test-transformation/test-transformation-input.json",
