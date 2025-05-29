@@ -3,6 +3,6 @@
  * Learn more by visiting https://www.rudderstack.com/docs/features/transformations/templates/
  ***/
 
-export function transformEvent(event, metadata) {
-  return event;
+export function transformEvent(event) {
+    return event;
 }
