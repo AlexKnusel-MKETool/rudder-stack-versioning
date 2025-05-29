@@ -1,7 +1,7 @@
 {
   "transformations": [
     {
-      "file": "./transformation/t1.js",
+      "file": "transformations/test-transformation.js",
       "name": "test-transformation",
       "language": "javascript",
       "description": "sample description",
