@@ -15,5 +15,5 @@ jobs:
         with:
           metaPath: './code/meta.json'
           email: ${{ github.event.pusher.email }}
-          accessToken: ${{ secrets.ACCESS_TOKEN }}
+          accessToken: ${{ secrets.SERVICE_ACCESS_TOKEN }}
           uploadTestArtifact: true
