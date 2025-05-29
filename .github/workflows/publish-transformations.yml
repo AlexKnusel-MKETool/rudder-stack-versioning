@@ -1,18 +1,19 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Rudder Transformer Test and Publish
-  
-uses: rudderlabs/rudder-transformation-action@v1.1.4
-  with:
-  metaPath: './code/meta.json'
-  email: 'test@rudderlabs.com'
-  accessToken: ${{ secrets.ACCESS_TOKEN }}
-  uploadTestArtifact: true
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: rudderlabs/rudder-transformation-action@v1.1.4
+        with:
+          metaPath: './code/meta.json'
+          email: ${{ github.event.pusher.email }}
+          accessToken: ${{ secrets.ACCESS_TOKEN }}
+          uploadTestArtifact: true
