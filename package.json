@@ -1,0 +1,31 @@
+{
+  "name": "rudder-transformations",
+  "version": "1.0.0",
+  "description": "rudder-transformations",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKnusel-MKETool/rudder-stack-versioning.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexKnusel-MKETool/rudder-stack-versioning/issues"
+  },
+  "homepage": "https://github.com/AlexKnusel-MKETool/rudder-stack-versioning#readme",
+  "dependencies": {
+    "prettier": "^3.5.3",
+    "prettier-eslint": "^16.4.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0"
+  }
+}

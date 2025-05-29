@@ -1,0 +1,28 @@
+{
+  "transformations": [
+    {
+      "file": "./transformation/t1.js",
+      "name": "test-transformation",
+      "language": "javascript",
+      "description": "sample description",
+      "test-input-file": "./tests/test-transformation.json",
+      "expected-output": "./code/expectedoutput.json"
+    },
+    {
+      "file": "./code/t2.py",
+      "name": "action-T2",
+      "language": "pythonfaas",
+      "description": "action-T2",
+      "test-input-file": "./code/events.json",
+      "expected-output": "./code/expected.json"
+    }
+  ],
+  "libraries": [
+    {
+      "file": "./libs/lib1.js",
+      "name": "lib1",
+      "language": "javascript",
+      "description": "action-lib1"
+    }
+  ]
+}
