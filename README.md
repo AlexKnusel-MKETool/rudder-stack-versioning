@@ -39,7 +39,7 @@ Each transformation entry should have the following format:
 
 - **file**: Path to the transformation script.
 - **name**: Human-readable name for the transformation.
-- **language**: Language used (typically "javascript", but can also be "pythonfaas").
+- **language**: Language used (typically "javascript").
 - **description**: Short description of the transformation.
 - **test-input-file**: Path to the input test data.
 - **expected-output**: Path to the expected output for the test.
@@ -48,8 +48,10 @@ The `libraries` array lists shared libraries that can be used by transformations
 
 ```
 {
-  "file": "libs/<library-file>.js",
-  "name": "<Library Name>"
+  "file": "./libs/<library-script>.js",
+  "name": "<Library Name>",
+  "description": "<Short description>"
+  "language": "javascript"
 }
 ```
 
