@@ -1,4 +1,4 @@
-name: Rudder Transformer Lint and Publish
+name: Rudderscript Lint and Publish
 
 on:
   push:
@@ -25,10 +25,22 @@ jobs:
   publish:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    environment: production
+    outputs:
+      environment: ${{ steps.setenv.outputs.environment }}
     steps:
       - uses: actions/checkout@v4
-      - uses: rudderlabs/rudder-transformation-action@v1.1.4
+      - name: Set environment
+        id: setenv
+        run: |
+          if [[ "${{ github.base_ref }}" == "main" ]]; then
+            echo "environment=production" >> $GITHUB_OUTPUT
+          else
+            echo "environment=development" >> $GITHUB_OUTPUT
+          fi
+      - name: Deploy/Publish
+        env:
+          ENVIRONMENT: ${{ steps.setenv.outputs.environment }}
+        uses: rudderlabs/rudder-transformation-action@v1.1.4
         with:
           metaPath: './meta.json'
           email: ${{ github.event.pusher.email }}
