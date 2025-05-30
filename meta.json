@@ -1,12 +1,12 @@
 {
   "transformations": [
     {
-      "file": "transformations/test-transformation.js",
+      "file": "transformations/t1.js",
       "name": "Test Transformation",
       "language": "javascript",
       "description": "sample description",
-      "test-input-file": "./tests/test-transformation/test-transformation-input.json",
-      "expected-output": "./tests/test-transformation/test-transformation-expected-output.json"
+      "test-input-file": "./tests/t1-test/t1-input.json",
+      "expected-output": "./tests/t1-test/t1-expected-output.json"
     }
   ],
   "libraries": []
