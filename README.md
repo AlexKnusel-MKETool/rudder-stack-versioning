@@ -55,7 +55,7 @@ The `libraries` array lists shared libraries that can be used by transformations
 
 ## Folder Details
 
-- **transformations/**: Contains JavaScript files implementing each transformation.
+- **transformations**: Contains JavaScript files implementing each transformation.
 - **libs**: Contains reusable JavaScript libraries for use in transformations.
 - **tests**: For each transformation, there is a subfolder containing input and expected output JSON files for automated testing.
 
