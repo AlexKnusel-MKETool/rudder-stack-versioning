@@ -1,35 +1,31 @@
 {
-  "name": "rudder-transformations",
-  "version": "1.0.0",
-  "description": "rudder-transformations",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "name": "rudderstack-transformations",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Sample rudderstack transformations",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlexKnusel-MKETool/rudder-stack-versioning.git"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AlexKnusel-MKETool/rudder-stack-versioning/issues"
-  },
-  "homepage": "https://github.com/AlexKnusel-MKETool/rudder-stack-versioning#readme",
-  "type": "module",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.27.1",
-    "@eslint/js": "^9.27.0",
-    "eslint": "^9.27.0",
-    "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-jest": "^28.12.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.4.0",
-    "globals": "^16.2.0",
-    "prettier": "^3.5.3"
+    "eslint": "^8.36.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.5.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "^27.2.1"
   }
 }

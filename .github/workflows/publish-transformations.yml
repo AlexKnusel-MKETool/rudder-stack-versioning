@@ -2,12 +2,13 @@ name: Rudder Transformer Lint and Publish
 
 on:
   push:
-    branches: ['main']
+    branches: ['*']
   pull_request:
     branches: ['main']
 
 jobs:
   lint:
+    name: Lint
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
