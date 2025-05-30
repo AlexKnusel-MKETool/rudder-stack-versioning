@@ -4,5 +4,6 @@
  ***/
 
 export function transformEvent(event) {
-    return event;
+  console.log('test');
+  return event;
 }

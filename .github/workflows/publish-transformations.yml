@@ -1,24 +1,23 @@
 name: Publish Transformations
 
 on:
-  pull_request:
-    branches: ['main']
+  push:
+    branches:
+      - main
+      - dev
 
 jobs:
   publish:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    outputs:
-      environment: ${{ steps.setenv.outputs.environment }}
     steps:
       - uses: actions/checkout@v4
       - name: Set environment
         id: setenv
         run: |
-          if [[ "${{ github.base_ref }}" == "main" ]]; then
-            echo "environment=production" >> $GITHUB_OUTPUT
+          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
+            echo "environment=prod" >> $GITHUB_OUTPUT
           else
-            echo "environment=development" >> $GITHUB_OUTPUT
+            echo "environment=dev" >> $GITHUB_OUTPUT
           fi
       - name: Deploy/Publish
         env:
