@@ -60,6 +60,7 @@ The `libraries` array lists shared libraries that can be used by transformations
 - **tests**: For each transformation, there is a subfolder containing input and expected output JSON files for automated testing.
 
 ## Development
+
 - Use `npm run lint` to check code style with ESLint.
 - Use `npm run format` to auto-format code with Prettier.
 - CI workflows in `.github/workflows/` ensure code quality and automate publishing.
