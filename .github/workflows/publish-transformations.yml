@@ -15,9 +15,9 @@ jobs:
         id: setenv
         run: |
           if [[ "${GITHUB_REF##*/}" == "main" ]]; then
-            echo "environment=production" >> $GITHUB_OUTPUT
+            echo "environment=prod" >> $GITHUB_OUTPUT
           else
-            echo "environment=development" >> $GITHUB_OUTPUT
+            echo "environment=dev" >> $GITHUB_OUTPUT
           fi
       - name: Deploy/Publish
         env:
