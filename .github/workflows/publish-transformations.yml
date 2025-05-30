@@ -1,4 +1,4 @@
-name: Rudderscript Lint and Publish
+name: Publish Transformations
 
 on:
   pull_request:
