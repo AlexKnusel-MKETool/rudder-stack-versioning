@@ -17,5 +17,12 @@
       "expected-output": "./tests/t2-test/t2-expected-output.json"
     }
   ],
-  "libraries": []
+  "libraries": [
+    {
+      "file": "libraries/l1.js",
+      "name": "Test Library",
+      "description": "sample description",
+      "language": "javascript"
+    }
+  ]
 }
