@@ -2,11 +2,19 @@
   "transformations": [
     {
       "file": "transformations/t1.js",
-      "name": "Test Transformation",
+      "name": "Test Transformation 1",
       "language": "javascript",
       "description": "sample description",
       "test-input-file": "./tests/t1-test/t1-input.json",
       "expected-output": "./tests/t1-test/t1-expected-output.json"
+    },
+    {
+      "file": "transformations/t2.js",
+      "name": "Test Transformation 2",
+      "language": "javascript",
+      "description": "sample description",
+      "test-input-file": "./tests/t2-test/t2-input.json",
+      "expected-output": "./tests/t2-test/t2-expected-output.json"
     }
   ],
   "libraries": []

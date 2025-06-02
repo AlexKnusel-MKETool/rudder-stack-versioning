@@ -26,5 +26,5 @@ jobs:
         with:
           metaPath: './meta.json'
           email: ${{ github.event.pusher.email }}
-          accessToken: ${{ secrets.SERVICE_ACCESS_TOKEN }}
+          accessToken: ${{ steps.setenv.outputs.environment == 'prod' && secrets.SERVICE_ACCESS_TOKEN_PROD || secrets.SERVICE_ACCESS_TOKEN_DEV }}
           uploadTestArtifact: true
