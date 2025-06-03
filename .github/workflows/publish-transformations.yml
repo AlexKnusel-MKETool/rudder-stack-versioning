@@ -1,10 +1,12 @@
 name: Publish Transformations
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
-      - dev
 
 jobs:
   publish:
@@ -14,10 +16,10 @@ jobs:
       - name: Set environment
         id: setenv
         run: |
-          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
-            echo "environment=prod" >> $GITHUB_OUTPUT
-          else
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
             echo "environment=dev" >> $GITHUB_OUTPUT
+          else
+            echo "environment=prod" >> $GITHUB_OUTPUT
           fi
       - name: Deploy/Publish
         env:
@@ -25,6 +27,6 @@ jobs:
         uses: rudderlabs/rudder-transformation-action@v1.1.4
         with:
           metaPath: './meta.json'
-          email: ${{ github.event.pusher.email }}
+          email: ${{ github.event.pusher.email || github.actor }}
           accessToken: ${{ steps.setenv.outputs.environment == 'prod' && secrets.SERVICE_ACCESS_TOKEN_PROD || secrets.SERVICE_ACCESS_TOKEN_DEV }}
           uploadTestArtifact: true
