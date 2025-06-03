@@ -18,7 +18,6 @@ Please provide a summary of the changes and the related context.
 
 ---
 
-
 ## Additional Notes
 
 (Add any additional information, screenshots, or context relevant to this PR. Maybe add a GIF for the reviewer to enjoy!)
