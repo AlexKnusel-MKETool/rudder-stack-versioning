@@ -6,7 +6,8 @@
       "language": "javascript",
       "description": "sample description",
       "test-input-file": "tests/t1-test/t1-input.json",
-      "expected-output": "tests/t1-test/t1-expected-output.json"
+      "expected-output": "tests/t1-test/t1-expected-output.json",
+      "publish": true
     },
     {
       "file": "transformations/t2.js",
@@ -14,7 +15,8 @@
       "language": "javascript",
       "description": "sample description",
       "test-input-file": "tests/t2-test/t2-input.json",
-      "expected-output": "tests/t2-test/t2-expected-output.json"
+      "expected-output": "tests/t2-test/t2-expected-output.json",
+      "publish": true
     }
   ],
   "libraries": [
@@ -22,7 +24,8 @@
       "file": "libraries/l1.js",
       "name": "Test Library",
       "description": "sample description",
-      "language": "javascript"
+      "language": "javascript",
+      "publish": true
     }
   ]
 }
