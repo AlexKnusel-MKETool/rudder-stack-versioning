@@ -24,7 +24,7 @@ jobs:
       - name: Deploy/Publish
         env:
           ENVIRONMENT: ${{ steps.setenv.outputs.environment }}
-        uses: AlexKnusel-MKETool/rudder-transformation-action@add-publish-flag
+        uses: AlexKnusel-MKETool/rudder-transformation-action@ui-repo-linking
         with:
           metaPath: './meta.json'
           email: ${{ github.event.pusher.email || github.actor }}
